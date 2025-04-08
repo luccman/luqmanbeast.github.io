@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luccman's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+</head>
+<body>
+
+    <header>
+        <h1>LUCCMAN's Portfolio</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="panning-image"></div>
+    <section id="about" class="about-section">
+        <div class="about-grid">
+            <div class="about-title">
+                <span class="big-text">ABOUT ME</span>
+                <span class="medium-text">Luqman Hakim</span>
+
+            </div>
+            <div class="about-content"><br>
+                <p>I am a <strong>multi-disciplinary developer and creative</strong> with experience in <strong>game development, software engineering, UI/UX design, graphic design, and music production.</strong></p>
+    
+                <p>My work blends <strong>technical expertise</strong> with <strong>artistic vision</strong> to create immersive digital experiences.</p>
+    
+                <h3>🎮 Game Development</h3>
+                <p>Experienced in <strong>Unreal Engine 5</strong>, working on both <strong>academic (FYP: Architectural Framework in RPGs)</strong> and <strong>professional projects (internship experience)</strong>.</p>
+    
+                <h3>💻 Software Development</h3>
+                <p>Experienced in <strong>C++, Java, VB.NET, HTML, CSS, JavaScript</strong>, focusing on scalable systems and efficient coding.</p>
+
+                <h3>🎨 UI/UX Design</h3>
+                <p><strong>Adobe XD Certified</strong>, with expertise in designing intuitive user experiences for software and games.</p>
+    
+                <h3>🎶 Music Production</h3>
+                <p>Passionate about music as an <strong>artist, writer, and mixer</strong>, I create original songs using <strong>FL Studio</strong>. In addition to my own work, I mix and master songs for other artists and manage their releases on platforms like Spotify and Apple Music</p>
+                <h3>📚 Education</h3>
+                <p>1️⃣ Bachelor's Degree in Computer Science (Software Engineering) <br> 2️⃣ Diploma in Computer Science (Information Technology)</p>
+
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project-category" onclick="toggleProjects('game-projects')">
+            <h3>🎮 Game Projects 🕹️</h3>
+            <div id="game-projects" class="project-list hidden">
+                <div class="project">
+                    <a href="zombie.html" class="project-link">
+                        <h3>Zombie Survival Game</h3>
+                        <p>A physics-driven FPS game where you fight off waves of zombies with a crossbow. Features destructible environments and power-ups.</p>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="7CorruptingSinsRPG.html" class="project-link">
+                        <h3>7 Corrupting Sins RPG</h3>
+                        <p>An RPG concept with intricate world-building and character backstories, all designed from scratch with ideas captured in notebooks and sketches.</p>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="ArchitecturalFrameworkinRPGs.html" class="project-link">
+                        <h3>Architectural Framework in RPGs</h3>
+                        <p>An RPG framework template built in Unreal Engine 5 for indie developers.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-category" onclick="toggleProjects('software-projects')">
+            <h3>🖥️ Software Projects 💻</h3>
+            <div id="software-projects" class="project-list hidden">
+                <p>Coming soon...</p>
+            </div>
+        </div>
+
+        <div class="project-category" onclick="toggleProjects('design-projects')">
+            <h3>🎨 Design Projects 🖼️</h3>
+            <div id="design-projects" class="project-list hidden">
+                <p>Coming soon...</p>
+            </div>
+        </div>
+
+        <div class="project-category" onclick="toggleProjects('music-projects')">
+            <h3>🎙️ Music Projects 🎧</h3>
+            <div id="music-projects" class="project-list hidden">
+                <p>Coming soon...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+            <br>
+            <br>
+            <br>
+        </form>
+        <div id="confirmation"></div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleProjects(categoryId) {
+            const category = document.getElementById(categoryId);
+            category.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
