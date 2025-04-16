@@ -137,10 +137,10 @@ p{
     color: #CAD2C5;  /* Light text */
 }
 
-li {
+ul {
     max-width: 90%;  
-    margin: 0 auto 1% auto;
-    line-height: 0.7;
+    margin: 0 auto 20px auto;
+    line-height: 1.6;
     font-size: 1.3em;
     color: #CAD2C5;  /* Light text */
 }
@@ -283,10 +283,9 @@ footer a:hover {
 #project-details h3 {
     color: #f5e0b7;  /* Soft lavender headings */
     max-width: 90%;  
-    margin: 0 auto 20px auto;
+    margin: 20px 20px auto;
     font-size: 1.5em;
     margin-left: 5%;
-    line-height: 1.6;
 
 }
 
@@ -528,8 +527,10 @@ form button:focus {
     overflow: hidden; /* Hide overflow for smooth scrolling */
     width: 100%;
     position: relative;
-    padding: 0px;
+    padding: 10px;
     margin: 0px;
+    border: #ffcc00 4px solid;
+    border-radius: 10px; /* Rounded corners */
 }
 
 .carousel-track {
