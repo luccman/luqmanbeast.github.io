@@ -523,3 +523,56 @@ form button:focus {
     background-color: #CAD2C5; /* Soft lavender on hover */
     color: #152731; /* Dark text on hover */
 }
+
+.image-carousel {
+    overflow: hidden; /* Hide overflow for smooth scrolling */
+    width: 100%;
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+}
+
+.carousel-track {
+    display: flex;
+    animation: scroll-left 10s linear infinite;
+    will-change: transform; /* Optimize animation performance */
+    width: fit-content;
+}
+
+.carousel-track img {
+    flex-shrink: 0;
+    margin-right: 10px;
+    width: auto; /* Ensure images scale properly */
+    height: 20rem; /* Maintain consistent height */
+    border-radius: 5px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Duplicate images for seamless scrolling */
+.carousel-track::after {
+    content: '';
+    display: flex;
+    width: 100%;
+    background: inherit;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Adjust to match the width of the duplicated content */
+    }
+}
+
+.PDFview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem auto; /* Center the PDF */
+    animation: fadeIn 3s ease-in-out; /* Add fade-in animation */
+    position: relative; /* For immersive effects */
+    overflow: hidden; /* Hide overflow for animations */
+    width: 50rem; /* Set a maximum width */
+    height: 70rem; /* Set a maximum height */
+}
