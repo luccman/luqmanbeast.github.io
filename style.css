@@ -338,11 +338,20 @@ footer a:hover {
     justify-content: center;
     align-items: center;
     margin: 20px auto; /* Center the video */
-    max-width: 80%; /* Set a maximum width */
     position: relative; /* For immersive effects */
     border-radius: 15px; /* Add rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
     animation: fadeIn 3s ease-in-out; /* Add fade-in animation */
+    width: 70rem; /* Set width to 90% of the container */
+    aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+    max-width: 90rem; /* Set a maximum width */
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px; /* Add rounded corners */
+    pointer-events: auto; /* Ensure clicks are allowed */
 }
 
 
