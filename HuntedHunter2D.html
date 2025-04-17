@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hunted Hunter Assignment</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <h1>Hunted Hunter Assignment</h1>
@@ -20,60 +22,89 @@
     </header>
 
     <section id="project-details">
+
+        <div class="image-carousel">
+            <div class="carousel-track">
+                <!-- Original Images -->
+                <img src="Pictures/huntedhunter1.png" alt="LIRA Project Preview 1">
+                <img src="Pictures/huntedhunter2.png" alt="LIRA Project Preview 2">
+                <img src="Pictures/huntedhunterattack.png" alt="LIRA Project Preview A">
+                <img src="Pictures/huntedhunter3.png" alt="LIRA Project Preview 3">
+
+                <!-- Duplicate Images -->
+                <img src="Pictures/huntedhunter1.png" alt="LIRA Project Preview 1">
+                <img src="Pictures/huntedhunter2.png" alt="LIRA Project Preview 2">
+                <img src="Pictures/huntedhunterattack.png" alt="LIRA Project Preview A">
+                <img src="Pictures/huntedhunter3.png" alt="LIRA Project Preview 3">
+            </div>
+        </div>
+
         <h2>Project Title: Hunted Hunter Assignment</h2>
+
+        <h3>Play The Game!</h3>
+        <div class="button-container">
+            <a href="https://luccman.github.io/HuntedHunterAssignment/" class="button" target="_blank">Play Hunted
+                Hunter</a>
+        </div>
 
         <h3>Group Member</h3>
         <p><strong>Luccman</strong> - Contributed to game design, development, implementation, and testing.</p>
 
         <h3>Introduction</h3>
-        <p>In <strong>"Hunted Hunter,"</strong> players immerse themselves in a 2D platformer set within a dense forest. As the protagonist, players must navigate through the wilderness while contending with various challenges. Among these challenges are aggressive wolves that leap to attack and eagles that descend from the sky. To survive, players can strategically deploy kunai to eliminate threats. Additionally, players can utilize environmental elements such as rocks for defense against wolves and trees for cover from eagle assaults. To add to the strategic depth, players must manage their resources wisely, as kunai are limited in supply and gradually replenish over time.</p>
+        <p>In <strong>"Hunted Hunter,"</strong> players immerse themselves in a 2D platformer set within a dense forest.
+            As the protagonist, players must navigate through the wilderness while contending with various challenges.
+            Among these challenges are aggressive wolves that leap to attack and eagles that descend from the sky. To
+            survive, players can strategically deploy kunai to eliminate threats. Additionally, players can utilize
+            environmental elements such as rocks for defense against wolves and trees for cover from eagle assaults. To
+            add to the strategic depth, players must manage their resources wisely, as kunai are limited in supply and
+            gradually replenish over time.</p>
 
         <h3>Documentation of the Game</h3>
         <ul>
             <li><strong>Enemy AI:</strong> Wolves that leap to attack, and eagles that swoop down from the sky.</li>
-            <li><strong>Gameplay Mechanics:</strong> Players can throw kunai to eliminate threats and navigate obstacles.</li>
-            <li><strong>Strategic Elements:</strong> Players can jump on rocks to avoid wolves and use trees for cover against aerial attacks.</li>
-            <li><strong>Resource Management:</strong> Players have a limited supply of kunai, which replenishes over time.</li>
+            <li><strong>Gameplay Mechanics:</strong> Players can throw kunai to eliminate threats and navigate
+                obstacles.</li>
+            <li><strong>Strategic Elements:</strong> Players can jump on rocks to avoid wolves and use trees for cover
+                against aerial attacks.</li>
+            <li><strong>Resource Management:</strong> Players have a limited supply of kunai, which replenishes over
+                time.</li>
         </ul>
 
-        <h3>User Manual</h3>
-        <p><strong>Method 1:</strong> Open your web browser and type: <a href="https://luccman.github.io/HuntedHunterAssignment/" target="_blank">https://luccman.github.io/HuntedHunterAssignment/</a></p>
-        <p><strong>Method 2:</strong></p>
-        <ol>
-            <li>Extract the "Hunted Hunter Game" zip folder.</li>
-            <li>Right-click on the folder and open it with Visual Studio Code.</li>
-            <li>Install the Live Server extension by Ritwick Dey.</li>
-            <li>Go to "game.js" and press "Go Live" on the bottom right.</li>
-        </ol>
+
 
         <h3>Instructions on How to Play</h3>
-        <ul>
-            <li>Use the <strong>A</strong> or <strong>D</strong> key to move the character left or right respectively.</li>
-            <li>Press the <strong>W</strong> key to jump.</li>
-            <li>Press the <strong>spacebar</strong> or <strong>left mouse button</strong> to attack enemies by throwing your Kunai.</li>
-            <li>Jump over the rock to progress further. You can also stand on the rock to avoid being jumped on by wolves temporarily.</li>
-            <li>You can stand under a tree to get cover from eagles.</li>
-            <li>Achieve the maximum high score.</li>
-        </ul>
-
-        <h3>Game Controls</h3>
         <ul>
             <li><strong>W</strong> - Jump</li>
             <li><strong>A</strong> - Move Left</li>
             <li><strong>D</strong> - Move Right</li>
-            <li><strong>Spacebar</strong> - Attack (Throw Kunai)</li>
-            
+            <li><strong>Spacebar / Left-Click</strong> - Attack (Throw Kunai)</li>
+            <li>Jump over the rock to progress further. You can also stand on the rock to avoid being jumped on by
+                wolves temporarily.</li>
+            <li>You can stand under a tree to get cover from eagles.</li>
+            <li>Achieve the maximum high score.</li>
+        </ul>
+
+
+
+
         <h3>GitHub Link</h3>
         <div class="button-container">
-            <a href="https://github.com/luccman/HuntedHunterAssignment" class="button">GitHub Repository</a>
+            <a href="https://github.com/luccman/HuntedHunterAssignment" class="button" target="_blank">GitHub
+                Repository</a>
         </div>
-        <h3>Video Demo</h3>
-        
-        <p><i>Note: The video is a demo of the game.</i></p>          
+        <h3>Gameplay Demo</h3>
+
+        <div >
+            <video class="video-container"autoplay loop muted playsinline disablepictureinpicture
+                controlslist="nodownload nofullscreen noremoteplayback" style="pointer-events: none;"
+                src="Pictures/HuntedHunterGameplay.mp4" width="100%"></video>
+        </div>
+
     </section>
 
     <footer>
         <p>&copy; 2025 Luccman</p>
     </footer>
 </body>
+
 </html>

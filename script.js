@@ -9,7 +9,27 @@ const scale = 1.5,
       canvas = document.querySelector('#pdf-render'),
       ctx = canvas.getContext('2d');
 
-      
+const images = [
+  "Pictures/FoodDisplay1.png",
+  "Pictures/FoodDisplay3.png",
+  "Pictures/FoodDisplay4.png",
+];
+
+let currentIndex = 0;
+const imgElement = document.getElementById("gallery-image");
+
+document.getElementById("next").addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % images.length;
+  imgElement.src = images[currentIndex];
+});
+
+document.getElementById("prev").addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  imgElement.src = images[currentIndex];
+});
+
+
+
 // Render the page
 const renderPage = num => {
     pageIsRendering = true;

@@ -17,7 +17,8 @@ body {
 header {
     background-color: #371470;  /* Soft purple header */
     color: #f5e0b7;  /* Light text for contrast */
-    padding: 15px;
+    padding-top: 15px;
+    padding-bottom: 0.5px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     font-size: larger;
@@ -58,8 +59,7 @@ a:hover {
 /* Navigation styling */
 nav ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    padding: 3px;
     text-align: center;
 }
 
@@ -69,7 +69,7 @@ nav ul li {
 }
 
  nav ul li a { 
-    color: #f5e0b7; 
+    color: #ffcc00; 
     text-decoration: none;
     font-family: Poppins, sans-serif;
     font-weight: 300; 
@@ -137,7 +137,7 @@ p{
     color: #CAD2C5;  /* Light text */
 }
 
-ul {
+ul, ol{
     max-width: 90%;  
     margin: 0 auto 20px auto;
     line-height: 1.6;
@@ -302,8 +302,11 @@ footer a:hover {
 
 .image-container img {
     max-width: 100%;
+    margin: 1%;
     border-radius: 15px; /* Add rounded corners */
     transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition for hover effects */
+    pointer-events: auto; /* Ensure clicks are allowed */
+
 }
 
 .image-container::before {
@@ -331,22 +334,18 @@ footer a:hover {
 }
 
 .video-container {
-    position: relative;
-    padding-bottom: 28.2%; /* 16:9 aspect ratio */
-    height: 315px;
-    overflow: hidden;
-    max-width: 80%; /* Set a maximum width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 20px auto; /* Center the video */
-    background: #000; /* Black background for video container */
+    max-width: 80%; /* Set a maximum width */
+    position: relative; /* For immersive effects */
+    border-radius: 15px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    animation: fadeIn 3s ease-in-out; /* Add fade-in animation */
 }
 
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -577,3 +576,16 @@ form button:focus {
     width: 50rem; /* Set a maximum width */
     height: 70rem; /* Set a maximum height */
 }
+
+.image-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  #gallery-image {
+    width: 500px;
+    height: auto;
+  }
+  
