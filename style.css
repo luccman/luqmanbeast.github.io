@@ -97,7 +97,7 @@ section {
 
 header h1 {
     font-family: "Poppins", system-ui;
-    font-size: 3.7em;
+    font-size: 4rem;
     font-weight: 700;
     color: #f5e0b7;
     text-transform: none;
@@ -472,14 +472,7 @@ form button:focus {
     flex-wrap: wrap;
     margin-top: 20px;
 }
-@media (max-width: 768px) {
-    .project {
-        width: 90%;
-        /* Make the project div take up most of the screen width */
-        margin: 0 auto;
-        /* Center the project div */
-    }
-}
+
 .project {
     background-color: rgb(106, 77, 165);
     color: black;
@@ -558,7 +551,8 @@ form button:focus {
 
 .project-category {
     cursor: pointer;
-    margin-bottom: 20px;
+    margin: 20px auto;
+    /* Center the div horizontally */
     padding: 20px;
     background-color: #371470;
     /* Soft purple background */
@@ -566,8 +560,10 @@ form button:focus {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-left: 15%;
-    margin-right: 15%;
+    width: 90%;
+    /* Always 90% width regardless of screen size */
+    max-width: 100rem;
+    /* Set a maximum width */
 }
 
 .project-category:hover {
