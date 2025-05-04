@@ -70,11 +70,14 @@ nav ul {
     list-style-type: none;
     padding: 3px;
     text-align: center;
+
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: inline-block;
+    margin: 0 clamp(0.2rem, 2vw, 1rem);
+    font-size: clamp(1rem, 4vw, 2rem);
+
 }
 
 nav ul li a {
@@ -82,7 +85,6 @@ nav ul li a {
     text-decoration: none;
     font-family: Poppins, sans-serif;
     font-weight: 300;
-
 }
 
 
@@ -97,7 +99,7 @@ section {
 
 header h1 {
     font-family: "Poppins", system-ui;
-    font-size: 4rem;
+    font-size: 4rem; /* Default font size */
     font-weight: 700;
     color: #f5e0b7;
     text-transform: none;
@@ -106,6 +108,29 @@ header h1 {
     padding: 0;
     text-align: center;
     font-style: normal;
+    max-width: 100%; /* Ensures it doesn't exceed the container width */
+    overflow:visible; /* Hides overflow text */
+    white-space: nowrap; /* Prevents wrapping */
+    text-overflow: ellipsis; /* Adds ellipsis for overflow text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+    header h1 {
+        font-size: 3rem; /* Smaller font size for medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.5rem; /* Even smaller font size for smaller screens */
+    }
+}
+
+@media (max-width: 400px) {
+    header h1 {
+        font-size: 2rem; /* Smallest font size for very small screens */
+    }
 }
 
 
