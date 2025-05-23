@@ -23,10 +23,8 @@ header {
     /* Light text for contrast */
     padding-top: 15px;
     padding-bottom: 0.5px;
-    text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    font-size: larger;
-
+    align-self: center;
 }
 
 a {
@@ -76,7 +74,7 @@ nav ul {
 nav ul li {
     display: inline-block;
     margin: 0 clamp(0.2rem, 2vw, 1rem);
-    font-size: clamp(1rem, 4vw, 2rem);
+    font-size: clamp(1rem, 4vw, 1.3rem);
 
 }
 
@@ -99,39 +97,31 @@ section {
 
 header h1 {
     font-family: "Poppins", system-ui;
-    font-size: 4rem; /* Default font size */
+    font-size: clamp(2.5rem, 4vw, 4rem); /* Responsive, but can get smaller if needed */
     font-weight: 700;
     color: #f5e0b7;
-    text-transform: none;
-    letter-spacing: 0px;
     margin: 0;
     padding: 0;
     text-align: center;
-    font-style: normal;
-    max-width: 100%; /* Ensures it doesn't exceed the container width */
-    overflow:visible; /* Hides overflow text */
-    white-space: nowrap; /* Prevents wrapping */
-    text-overflow: ellipsis; /* Adds ellipsis for overflow text */
 }
-
 /* Responsive adjustments */
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
     header h1 {
-        font-size: 3rem; /* Smaller font size for medium screens */
+        font-size: 3rem; 
     }
 }
 
 @media (max-width: 600px) {
     header h1 {
-        font-size: 2.5rem; /* Even smaller font size for smaller screens */
+        font-size: 2.5rem;
     }
 }
 
 @media (max-width: 400px) {
     header h1 {
-        font-size: 2rem; /* Smallest font size for very small screens */
+        font-size: 2rem;
     }
-}
+} */
 
 
 h2,
@@ -341,11 +331,12 @@ footer a:hover {
     color: #CAD2C5;
     /* Light text */
     margin: 20px auto;
+    
 }
 
 #project-details h2 {
     color: #ffcc00;
-    /* Soft lavender headings */
+    font-size: clamp(2rem, 2vw, 3rem); /* Responsive font size */
 }
 
 #project-details h3 {
@@ -353,9 +344,15 @@ footer a:hover {
     /* Soft lavender headings */
     max-width: 90%;
     margin: 20px 20px auto;
-    font-size: 1.5em;
+    font-size: clamp(1.5rem, 2vw, 2rem); /* Responsive font size */
     margin-left: 5%;
 
+}
+
+#project-details p,
+#project-details ul,
+#project-details li {
+    font-size: clamp(1rem, 3vw, 1.3rem); /* Responsive font size */
 }
 
 .image-container {
@@ -411,35 +408,64 @@ footer a:hover {
     }
 }
 
-.video-container {
+.video-container video {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px auto;
-    /* Center the video */
     position: relative;
-    /* For immersive effects */
     border-radius: 15px;
-    /* Add rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Add shadow for depth */
     animation: fadeIn 3s ease-in-out;
-    /* Add fade-in animation */
-    width: 70rem;
-    /* Set width to 90% of the container */
-    aspect-ratio: 16 / 9;
-    /* Maintain 16:9 aspect ratio */
-    max-width: 90rem;
-    /* Set a maximum width */
+    color: #ffffff;
+    /* Responsive sizing for portrait vs landscape */
+    max-width: 40rem;
+    max-height: 30rem;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* Portrait video: height is the constraint */
+.video-container video[height][width]:not([width=""]):not([height=""]) {
+    aspect-ratio: attr(width number) / attr(height number);
+    max-width: 20rem;
+    max-height: 30rem;
+}
+
+/* Landscape video: width is the constraint */
+.video-container video[width][height]:not([width=""]):not([height=""]) {
+    aspect-ratio: attr(width number) / attr(height number);
+    max-width: 40rem;
+    max-height: 20rem;
+}
+@media (orientation: portrait) {
+    .video-container video {
+        max-width: 100%;
+        max-height: 40rem;
+    }
+}
+
+@media (orientation: landscape) {
+    .video-container video {
+        max-width: 70%;
+        max-height: 45rem;
+    }
 }
 
 .video-container iframe {
-    width: 100%;
-    height: 100%;
+    display: block;
+    margin: 0 auto;
     border-radius: 15px;
-    /* Add rounded corners */
     pointer-events: auto;
-    /* Ensure clicks are allowed */
+    /* Responsive aspect ratio for YouTube (16:9) */
+    width: 100%;
+    max-width: 1200px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    /* Remove fixed height to allow aspect-ratio to control height */
+    border: none;
 }
 
 
@@ -481,7 +507,7 @@ form button:focus {
 
 /* Responsive styles for mobile devices */
 
-.project-details iframe {
+/* .project-details iframe {
     top: 0;
     left: 0;
     width: 100%;
@@ -489,7 +515,7 @@ form button:focus {
     border: none;
     justify-content: center;
     align-items: center;
-}
+} */
 
 /* Project list styling */
 .project-list {
@@ -521,21 +547,21 @@ form button:focus {
 .project h4 {
     color: #f5e0b7;
     margin-bottom: 10px;
-    font-size: clamp(1rem, 2vw, 1.4rem);
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
     font-weight: 600;
 }
 
 .project p {
-    font-size: clamp(0.7rem, 1vw, 1.2rem);
+    font-size: clamp(0.9rem, 1vw, 1.2rem);
     color: #CAD2C5;
     align-self: justify;
 }
 
 .label {
-    font-size: 1.05em;
-    font-weight: 600;
-    padding-bottom: 12px;
-    display: inline-block;
+    font-size: clamp(1rem, 1vw, 1.2rem);
+    font-weight: 400;
+    display: block;
+    color: #ace8ab;
 }
 
 .view-project {
@@ -590,7 +616,6 @@ form button:focus {
 .project-category:hover {
     background-color: #4e1d9c;
     /* Light teal on hover */
-    transform: scale(1.02);
     font-size: scale(1.02);
     /* Slightly increase font size on hover */
 
@@ -726,7 +751,7 @@ form button:focus {
     /* For immersive effects */
     overflow: hidden;
     /* Hide overflow for animations */
-    width: 50rem;
+    width: clamp(20rem, 90%, 100%);
     /* Set a maximum width */
     height: 70rem;
     /* Set a maximum height */
