@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Corrupting Sins — Game Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>7 Corrupting Sins Website</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="project-details">
+        <div class="image-carousel">
+            <div class="carousel-track">
+                <!-- Original Images -->
+                <img src="Pictures/7CSWebPics(1).png" alt="7CS Web Project Preview 1">
+                <img src="Pictures/7CSWebPics(2).png" alt="7CS Web Project Preview 2">
+                <img src="Pictures/7CSWebPics(4).png" alt="7CS Web Project Preview A">
+                <img src="Pictures/7CSWebPics(3).png" alt="7CS Web Project Preview 3">
+
+                <!-- Duplicate Images -->
+                <img src="Pictures/7CSWebPics(1).png" alt="7CS Web Project Preview 1">
+                <img src="Pictures/7CSWebPics(2).png" alt="7CS Web Project Preview 2">
+                <img src="Pictures/7CSWebPics(4).png" alt="7CS Web Project Preview A">
+                <img src="Pictures/7CSWebPics(3).png" alt="7CS Web Project Preview 3">
+            </div>
+        </div>
+        <h2>Status: <span style="color:#ff9800;">IN PROGRESS</span></h2>
+        <p>
+            <strong>7 Corrupting Sins — Game Landing Page</strong> will be a visually immersive, responsive landing page
+            for the game 7 Corrupting Sins, built with React, Vite, and Material UI (MUI).
+        </p>
+
+        <h3>Features</h3>
+        <ul>
+            <li><b>Custom MUI Theme:</b> Unique color palette, custom fonts, button variants, and AppBar styling</li>
+            <li><b>Responsive Layout:</b> Mobile-friendly with adaptive typography and layout</li>
+            <li><b>3D Globe Model:</b> Interactive 3D model rendered with react-three-fiber</li>
+            <li><b>Sectioned Content:</b> Hero, About, Media Gallery, Factions, Pre-Order, and Footer</li>
+            <li><b>Media Gallery:</b> YouTube trailer embed and interactive image modal</li>
+            <li><b>Pre-Order Section:</b> Styled call-to-action with platform links</li>
+            <li><b>Accessible & Semantic:</b> Semantic HTML and accessible MUI components</li>
+        </ul>
+
+        <h3>Tech Stack</h3>
+        <ul>
+            <li>React 19</li>
+            <li>Vite</li>
+            <li>Material UI (MUI)</li>
+            <li>@mui/lab Timeline</li>
+            <li>react-three-fiber</li>
+            <li>@emotion/styled</li>
+            <li>Custom fonts via <code>@font-face</code></li>
+        </ul>
+
+        <h3>Project Structure</h3>
+        <pre class="project-structure">
+        7CS-Website/
+        ├── public/
+        │   └── assets/
+        │       ├── fonts/
+        │       ├── HorrorTexture.png
+        │       ├── 7CSDrawingTheme.png
+        │       └── stylized_planet.glb
+        ├── src/
+        │   ├── components/
+        │   │   ├── Navbar.jsx
+        │   │   ├── Hero.jsx
+        │   │   ├── About.jsx
+        │   │   ├── Media.jsx
+        │   │   ├── Factions.jsx
+        │   │   ├── PreOrder.jsx
+        │   │   ├── Footer.jsx
+        │   │   └── Sin.jsx
+        │   ├── fonts.css
+        │   ├── theme.jsx
+        │   ├── App.jsx
+        │   ├── index.css
+        │   └── main.jsx
+        ├── index.html
+        └── package.json
+        </pre>
+
+        <h3>Customization</h3>
+        <ul>
+            <li><b>Fonts:</b> Add/replace font files in <code>public/assets/fonts/</code> and update
+                <code>src/fonts.css</code></li>
+            <li><b>Theme:</b> Edit <code>src/theme.jsx</code> for colors, typography, or component variants</li>
+            <li><b>3D Model:</b> Replace <code>public/assets/stylized_planet.glb</code> with your own model</li>
+        </ul>
+
+        <h3>Notable Components</h3>
+        <ul>
+            <li><b>Navbar:</b> Custom AppBar with textured background and themed navigation buttons</li>
+            <li><b>Hero:</b> Large banner with background image, gradient overlay, and call-to-action buttons</li>
+            <li><b>About:</b> Split layout with video and lore/description</li>
+            <li><b>Media:</b> Trailer embed and interactive gallery with modal</li>
+            <li><b>Factions:</b> 3D globe and dual timelines for Humans and Jinns</li>
+            <li><b>PreOrder:</b> Styled section with platform links</li>
+            <li><b>Footer:</b> Social links and copyright</li>
+        </ul>
+
+        <h3>Accessibility & Best Practices</h3>
+        <ul>
+            <li>Semantic HTML and accessible MUI components</li>
+            <li>Responsive design for all screen sizes</li>
+            <li>Custom focus and hover states for interactive elements</li>
+        </ul>
+
+
+        <h3>Gallery</h3>
+        <div class="screenshot-container-scrollable">
+            <img src="Pictures/7CSWebPics(1).png" alt="Hero Section Screenshot" style="max-width:60rem;">
+            <img src="Pictures/7CSWebPics(4).png" alt="Factions Timeline Screenshot" style="max-width:60rem;">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 LUCRA STUDIOS</p>
+    </footer>
+</body>
+
+</html>

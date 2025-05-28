@@ -97,13 +97,15 @@ section {
 
 header h1 {
     font-family: "Poppins", system-ui;
-    font-size: clamp(2.5rem, 4vw, 4rem); /* Responsive, but can get smaller if needed */
+    font-size: clamp(2rem, 4vw, 4rem);
+    /* Responsive, but can get smaller if needed */
     font-weight: 700;
     color: #f5e0b7;
     margin: 0;
     padding: 0;
     text-align: center;
 }
+
 /* Responsive adjustments */
 /* @media (max-width: 800px) {
     header h1 {
@@ -128,7 +130,6 @@ h2,
 h3,
 h4,
 h5 {
-
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     /* Add subtle shadow to headings */
 }
@@ -220,6 +221,7 @@ section div p {
     /* Prevents text from wrapping */
 
 }
+
 .about-content h3 {
     margin-top: 1rem;
     color: #ffcc00;
@@ -331,12 +333,13 @@ footer a:hover {
     color: #CAD2C5;
     /* Light text */
     margin: 20px auto;
-    
+
 }
 
 #project-details h2 {
     color: #ffcc00;
-    font-size: clamp(2rem, 2vw, 3rem); /* Responsive font size */
+    font-size: clamp(2rem, 2vw, 3rem);
+    /* Responsive font size */
 }
 
 #project-details h3 {
@@ -344,7 +347,8 @@ footer a:hover {
     /* Soft lavender headings */
     max-width: 90%;
     margin: 20px 20px auto;
-    font-size: clamp(1.5rem, 2vw, 2rem); /* Responsive font size */
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    /* Responsive font size */
     margin-left: 5%;
 
 }
@@ -352,7 +356,8 @@ footer a:hover {
 #project-details p,
 #project-details ul,
 #project-details li {
-    font-size: clamp(1rem, 3vw, 1.3rem); /* Responsive font size */
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    /* Responsive font size */
 }
 
 .image-container {
@@ -395,6 +400,52 @@ footer a:hover {
     transition: opacity 0.5s ease;
 }
 
+.image-container-scrollable {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem auto;
+    animation: fadeIn 3s ease-in-out;
+    position: relative;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 2rem;
+    max-width: 90%;
+    padding-bottom: 2rem;
+}
+
+.image-container-scrollable img{
+
+    margin-right: 5px;
+    border-radius: 33px;
+    border: 5px solid rgb(0, 0, 0);
+    box-shadow: 5 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 15%;
+}
+
+.screenshot-container-scrollable {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem auto;
+    animation: fadeIn 3s ease-in-out;
+    position: relative;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 2rem;
+    max-width: 90%;
+    padding-bottom: 2rem;
+}
+
+.screenshot-container-scrollable img{
+
+    margin-right: 5px;
+    border-radius: 15px;
+    box-shadow: 5 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 70%;
+}
 
 @keyframes fadeIn {
     from {
@@ -424,7 +475,9 @@ footer a:hover {
     width: auto;
     height: auto;
     object-fit: contain;
+    
 }
+
 
 
 /* Portrait video: height is the constraint */
@@ -440,6 +493,7 @@ footer a:hover {
     max-width: 40rem;
     max-height: 20rem;
 }
+
 @media (orientation: portrait) {
     .video-container video {
         max-width: 100%;
@@ -468,6 +522,22 @@ footer a:hover {
     border: none;
 }
 
+.iphone-video video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    position: relative;
+    border-radius: 45px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 3s ease-in-out;
+    color: #ffffff;
+    max-width: 20rem;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border: #000000 7px solid;
+}
 
 
 /* Responsive Design */
@@ -535,7 +605,11 @@ form button:focus {
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+@media (min-width: 600px) and (max-width: 1400px) {
+    .project {
+        width: 20rem;
+    }
+}
 .project h3 {
     font-size: clamp(1.2rem, 2vw, 1.5rem);
     color: #ffcc00;
@@ -624,10 +698,12 @@ form button:focus {
 }
 
 .project-category h3 {
-    font-size: clamp(1.5rem, 4vw, 2rem); /* Responsive font size */
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    /* Responsive font size */
     color: #ffcc00;
     margin: 0;
 }
+
 .project-list {
     display: flex;
     flex-wrap: wrap;
@@ -635,6 +711,7 @@ form button:focus {
     justify-content: center;
     margin-top: 20px;
 }
+
 .project-list.hidden {
     display: none;
 }
@@ -812,6 +889,15 @@ form button:focus {
     max-width: 92%;
 }
 
+.project-structure {
+    background: #231942;
+    color: #ace8ab;
+    padding: 0em;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+
+}
 
 /* 
     Colors used for text styling throughout the application:

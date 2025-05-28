@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEON Fantasy App — React Native</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>AEON Fantasy App</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="project-details">
+        <div class="image-carousel">
+            <div class="carousel-track">
+                <!-- Original Images -->
+                <img src="Pictures/AEONFantasyAppSS (home).PNG" alt="7CS Web Project Preview 1">
+                <img src="Pictures/AEONFantasyAppSS (1).PNG" alt="7CS Web Project Preview 1">
+                <img src="Pictures/AEONFantasyAppSS (2).PNG" alt="7CS Web Project Preview 2">
+                <img src="Pictures/AEONFantasyAppSS (3).PNG" alt="7CS Web Project Preview A">
+                <img src="Pictures/AEONFantasyAppSS (6).PNG" alt="7CS Web Project Preview 3">
+                <img src="Pictures/AEONFantasyAppSS (7).PNG" alt="7CS Web Project Preview 3">
+                <img src="Pictures/AEONFantasyAppSS (9).PNG" alt="7CS Web Project Preview 3">
+                <img src="Pictures/AEONFantasyAppSS (10).PNG" alt="7CS Web Project Preview 3">
+                <img src="Pictures/AEONFantasyAppSS (home).PNG" alt="7CS Web Project Preview 1">
+                <img src="Pictures/AEONFantasyAppSS (1).PNG" alt="7CS Web Project Preview 1">
+                <img src="Pictures/AEONFantasyAppSS (2).PNG" alt="7CS Web Project Preview 2">
+                <img src="Pictures/AEONFantasyAppSS (3).PNG" alt="7CS Web Project Preview A">
+                <img src="Pictures/AEONFantasyAppSS (6).PNG" alt="7CS Web Project Preview 3">
+                <img src="Pictures/AEONFantasyAppSS (7).PNG" alt="7CS Web Project Preview 3">
+                <img src="Pictures/AEONFantasyAppSS (9).PNG" alt="7CS Web Project Preview 3">
+                <img src="Pictures/AEONFantasyAppSS (10).PNG" alt="7CS Web Project Preview 3"> <img
+                    src="Pictures/AEONFantasyAppSS (home).PNG" alt="7CS Web Project Preview 1">
+                <img src="Pictures/AEONFantasyAppSS (1).PNG" alt="7CS Web Project Preview 1">
+                <img src="Pictures/AEONFantasyAppSS (2).PNG" alt="7CS Web Project Preview 2">
+                <img src="Pictures/AEONFantasyAppSS (3).PNG" alt="7CS Web Project Preview A">
+                <img src="Pictures/AEONFantasyAppSS (6).PNG" alt="7CS Web Project Preview 3">
+                <img src="Pictures/AEONFantasyAppSS (7).PNG" alt="7CS Web Project Preview 3">
+                <img src="Pictures/AEONFantasyAppSS (9).PNG" alt="7CS Web Project Preview 3">
+                <img src="Pictures/AEONFantasyAppSS (10).PNG" alt="7CS Web Project Preview 3">
+
+            </div>
+        </div>
+            <h2>Status: <span style="color:#ff9800;">IN PROGRESS</span></h2>
+            <p>
+                <strong>AEON Fantasy App</strong> will be a modern, cross-platform mobile application for AEON Fantasy
+                arcade users, built with <b>React Native</b>, <b>Expo</b>, and <b>TypeScript</b>. It enhances the arcade
+                experience by providing features like user profile management, arcade discovery, activity tracking, and
+                more—all in a playful, user-friendly interface.
+            </p>
+
+            <h3>Features</h3>
+            <ul>
+                <li><b>User Profile:</b> View/edit profile, interactive tier badge demo, quick email contact</li>
+                <li><b>Arcade Discovery:</b> Browse/filter arcades, see nearest arcades with distance/address, arcade
+                    cards
+                    with logos</li>
+                <li><b>Activity Tracking:</b> Visualize spending with a donut chart (Victory Native), list of recent
+                    activities</li>
+                <li><b>Custom Navigation:</b> Bottom tab navigation with custom icons and playful design</li>
+                <li><b>Settings & Preferences:</b> Change password, manage payment, language, privacy, and log out</li>
+                <li><b>Responsive Design:</b> Works on iOS, Android, and web (via Expo)</li>
+            </ul>
+
+            <h3>Tech Stack</h3>
+            <ul>
+                <li>React Native (Expo)</li>
+                <li>TypeScript</li>
+                <li>Victory Native (charts)</li>
+                <li>React Navigation & Expo Router</li>
+                <li>Custom SVG/PNG assets</li>
+                <li>Styled with StyleSheet</li>
+            </ul>
+
+            <h3>Project Structure</h3>
+            <pre class="project-structure">
+        AEON-Fantasy-App/
+        ├── app/
+        │   ├── (tabs)/
+        │   │   ├── activity.tsx      # Activity & spending chart
+        │   │   ├── arcade.tsx        # Arcade discovery & filter
+        │   │   ├── profile.tsx       # User profile & settings
+        │   │   ├── scan.tsx          # (Placeholder for QR scan)
+        │   │   └── index.tsx         # Home screen
+        │   ├── _layout.tsx           # App layout & navigation
+        │   ├── modal.tsx             # Modal for theme toggle
+        │   └── +not-found.tsx        # 404 screen
+        ├── assets/                   # Images, icons, fonts
+        ├── components/               # Shared UI components & hooks
+        ├── constants/                # Theme colors, etc.
+        ├── package.json
+        ├── tsconfig.json
+        └── ...
+        </pre>
+
+            <h3>Notable Implementation Details</h3>
+            <ul>
+                <li><b>Profile Tier Demo:</b> Tier badge next to avatar is interactive—tap to cycle tiers and points
+                </li>
+                <li><b>Charts:</b> Activity spending visualized with Victory Native Pie/PolarChart</li>
+                <li><b>Custom Tab Bar:</b> Bottom navigation uses custom images and playful layout</li>
+                <li><b>TypeScript:</b> Fully typed for reliability and maintainability</li>
+            </ul>
+
+            <h3>Customization & Extensibility</h3>
+            <ul>
+                <li><b>Assets:</b> Swap icons/images in <code>assets/</code> to match your brand</li>
+                <li><b>Navigation:</b> Easily add new screens/tabs via Expo Router</li>
+                <li><b>Theming:</b> Centralized in <code>constants/Colors.ts</code> for easy updates</li>
+            </ul>
+
+            <h3>Video</h3>
+            <p>
+                A video showcasing the AEON Fantasy App:
+            <div class="iphone-video">
+
+                <video  controls autoplay loop muted playsinline width="100%" onvolumechange="this.muted=true;">
+                    <source src="Pictures/AEONFantasyAppVideo.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            </p>
+
+            <h3>Gallery</h3>
+            <div class="image-container-scrollable">
+                <img class="image-box" src="Pictures/AEONFantasyAppSS (home).PNG" alt="Home Screen" style="max-width:350px; border-radius: 15;">
+                <img class="image-box" src="Pictures/AEONFantasyAppSS (10).PNG" alt="Activity Tracking" style="max-width:350px;">
+                <img class="image-box" src="Pictures/AEONFantasyAppSS (3).PNG" alt="Arcade Discovery" style="max-width:350px;">
+                <img class="image-box" src="Pictures/AEONFantasyAppSS (6).PNG" alt="Activity Tracking" style="max-width:350px;">
+                <img class="image-box" src="Pictures/AEONFantasyAppSS (7).PNG" alt="Activity Tracking" style="max-width:350px;">
+                <img class="image-box" src="Pictures/AEONFantasyAppSS (2).PNG" alt="Activity Tracking" style="max-width:350px;">
+                <img class="image-box" src="Pictures/AEONFantasyAppSS (1).PNG" alt="Activity Tracking" style="max-width:350px;">
+
+            </div>
+
+            <h3>License</h3>
+            <p>
+                This project is for personal purposes and not for commercial use.
+            </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 LUCRA STUDIOS</p>
+    </footer>
+</body>
+
+</html>
