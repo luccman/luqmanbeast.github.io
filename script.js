@@ -107,6 +107,22 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
+
+    // Unique GIF background on hover for each project
+    document.querySelectorAll('.project').forEach(function(card) {
+        const hoverGif = card.getAttribute('data-hover-gif');
+        if (hoverGif) {
+            card.addEventListener('mouseenter', function() {
+                card.style.backgroundImage = `url('${hoverGif}')`;
+                card.style.backgroundSize = 'cover';
+                card.style.backgroundPosition = 'center';
+            });
+            card.addEventListener('mouseleave', function() {
+                card.style.backgroundImage = '';
+                card.style.backgroundColor = ''; // Let CSS background-color show again
+            });
+        }
+    });
 });
 
 

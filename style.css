@@ -737,7 +737,7 @@ form button:focus {
     z-index: 0;
     pointer-events: none;
     background: url('Pictures/CodingBGProjects.svg') no-repeat right center;
-    background-size: 40rem auto; /* Only middle part when closed */
+    background-size: 40% auto; /* Only middle part when closed */
     transition: background-size 0.6s cubic-bezier(0.4,0,0.2,1), padding-top 0.6s;
     opacity: 0.5; /* Optional: make it subtle */
     padding-top: 420px;
@@ -771,6 +771,18 @@ form button:focus {
     background-size: 50% 50%;
     opacity: 1; /* Make it more visible when not hidden */
 }
+
+.project-list:hover .project {
+    filter: blur(3px);
+    transition: filter 0.3s;
+}
+
+.project-list .project:hover {
+    filter: none;
+    z-index: 2;
+    transition: filter 0.3s;
+}
+
 .project-category {
     position: relative;
     overflow: hidden;
