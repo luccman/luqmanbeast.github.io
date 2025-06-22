@@ -729,6 +729,7 @@ form button:focus {
     background-size: 40% auto; /* Only middle part when closed */
     transition: background-size 0.6s cubic-bezier(0.4,0,0.2,1);
     opacity: 0.25; /* Optional: make it subtle */
+    margin-top: -100px;
 }
 .coding-bg-svg {
     position: absolute;
@@ -736,9 +737,11 @@ form button:focus {
     z-index: 0;
     pointer-events: none;
     background: url('Pictures/CodingBGProjects.svg') no-repeat right center;
-    background-size: 40% auto; /* Only middle part when closed */
-    transition: background-size 0.6s cubic-bezier(0.4,0,0.2,1);
-    opacity: 0.25; /* Optional: make it subtle */
+    background-size: 40rem auto; /* Only middle part when closed */
+    transition: background-size 0.6s cubic-bezier(0.4,0,0.2,1), padding-top 0.6s;
+    opacity: 0.5; /* Optional: make it subtle */
+    padding-top: 420px;
+
 }
 .design-bg-svg {
     position: absolute;
@@ -749,6 +752,8 @@ form button:focus {
     background-size: 40% auto; /* Only middle part when closed */
     transition: background-size 0.6s cubic-bezier(0.4,0,0.2,1), opacity 0.6s; 
     opacity: 0.25; /* Optional: make it subtle */
+    margin-top: -50px;
+
 }
 .music-bg-svg {
     position: absolute;
@@ -759,10 +764,11 @@ form button:focus {
     background-size: 40% auto; /* Only middle part when closed */
     transition: background-size 0.6s cubic-bezier(0.4,0,0.2,1), opacity 0.6s; 
     opacity: 0.25; /* Optional: make it subtle */
+    padding-top: 200px;
 }
 /* When open, scale SVG to fill */
-.project-list:not(.hidden) .game-bg-svg {
-    background-size: 100% 100%;
+.project-list.hidden .game-bg-svg {
+    background-size: 50% 50%;
     opacity: 1; /* Make it more visible when not hidden */
 }
 .project-category {
@@ -900,20 +906,22 @@ form button:focus {
 #name {
     text-align: center;
     font-size: 1.5em;
-    width: 20rem;
+    width: 30rem;
     font-family: poppins;
     font-weight: 400;
     max-width: 92%;
+    height: 1rem;
 
 }
 
 #email {
     text-align: center;
     font-size: 1.5em;
-    width: 40rem;
+    width: 30rem;
     font-family: poppins;
     font-weight: 400;
     max-width: 92%;
+    height: 1rem;
 
 }
 
