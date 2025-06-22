@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws & Preferences 🐾</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Paws & Preferences</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="project-details">
+        <div class="image-carousel">
+            <div class="carousel-track">
+                <!-- Original Images -->
+                <img src="Pictures/7CSWebPics(1).png" alt="7CS Web Project Preview 1">
+                <img src="Pictures/7CSWebPics(2).png" alt="7CS Web Project Preview 2">
+                <img src="Pictures/7CSWebPics(4).png" alt="7CS Web Project Preview A">
+                <img src="Pictures/7CSWebPics(3).png" alt="7CS Web Project Preview 3">
+
+                <!-- Duplicate Images -->
+                <img src="Pictures/7CSWebPics(1).png" alt="7CS Web Project Preview 1">
+                <img src="Pictures/7CSWebPics(2).png" alt="7CS Web Project Preview 2">
+                <img src="Pictures/7CSWebPics(4).png" alt="7CS Web Project Preview A">
+                <img src="Pictures/7CSWebPics(3).png" alt="7CS Web Project Preview 3">
+            </div>
+        </div>
+        <h2>Overview</h2>
+        <p>
+            <strong>Paws & Preferences</strong> is a playful, swipe-based React app for rating cats, inspired by the
+            familiar "Tinder for pets" experience. Users can swipe through a stack of adorable cats, liking, disliking,
+            or even "super liking" their favorites. The app is built with React, TypeScript, Vite, Framer Motion, and
+            Material UI.
+        </p>
+
+        <h3>Features</h3>
+        <ul>
+            <li><b>Swipeable Cards:</b> Drag cards left or right to dislike or like cats, with smooth animations.</li>
+            <li><b>Button Controls:</b> Like, dislike, super like, and undo actions are available as buttons for
+                accessibility.</li>
+            <li><b>Super Like:</b> Limited-use "super like" for your absolute favorites, with a special animation.</li>
+            <li><b>Undo:</b> Go back and change your last decision.</li>
+            <li><b>Summary Gallery:</b> At the end, see a summary of all your liked, super liked, and disliked cats.
+            </li>
+            <li><b>Responsive Design:</b> Works beautifully on desktop and mobile.</li>
+            <li><b>Animated Feedback:</b> Visual overlays and transitions for every interaction.</li>
+        </ul>
+
+        <h3>Technologies Used</h3>
+        <ul>
+            <li>React (with hooks)</li>
+            <li>TypeScript</li>
+            <li>Vite</li>
+            <li>Framer Motion</li>
+            <li>Material UI</li>
+            <li>Custom CSS</li>
+            <li>Cataas API (for fetching random cat images)</li>
+        </ul>
+
+        <h3>How It Works</h3>
+        <ul>
+            <li><b>Card Swiping & Dragging:</b> Each cat is displayed as a card using a <code>&lt;motion.div&gt;</code>
+                from Framer Motion. Drag left/right to dislike/like, with colored overlays (green/red) and smooth
+                transitions.</li>
+            <li><b>Button Actions:</b> Like, Dislike, Super Like (2 per session), and Undo are available as Material UI
+                buttons below the stack.</li>
+            <li><b>Overlay Feedback:</b> Dynamic overlays update in real time as you drag or use buttons.</li>
+            <li><b>Card Animation:</b> Cards animate in and out with scale, opacity, and position changes for a smooth
+                experience.</li>
+            <li><b>Summary:</b> After all cats are rated, a summary screen shows all your picks, with super liked cats
+                highlighted.</li>
+        </ul>
+
+        <h3>Project Structure</h3>
+        <pre class="project-structure">
+        src/
+         ├── App.tsx         # Main app logic and UI
+         ├── App.css         # Custom styles
+         ├──main.tsx        # Entry point
+         ├──index.css       # Global styles
+        assets/         # Images (superLikeCat, loader, etc.)
+        public/
+         └──index.html      # HTML template
+        </pre>
+
+        <h3>Customization</h3>
+        <ul>
+            <li><b>Card Count:</b> Change <code>CAT_COUNT</code> in App.tsx to adjust how many cats per session.</li>
+            <li><b>Super Likes:</b> Change <code>INITIAL_SUPER_LIKES</code> for more or fewer super likes.</li>
+            <li><b>Overlay Sensitivity:</b> Adjust the max value in <code>getOverlayColor</code> for how quickly the
+                overlay color appears.</li>
+        </ul>
+
+        <h3>Running Locally</h3>
+        <ol>
+            <li>Install dependencies:<br>
+                <code>npm install</code>
+            </li>
+            <li>Start the development server:<br>
+                <code>npm run dev</code>
+            </li>
+            <li>Open <a href="http://localhost:5173" target="_blank">http://localhost:5173</a> in your browser.</li>
+        </ol>
+
+        <h3>Credits</h3>
+        <ul>
+            <li>Cat images from <a href="https://cataas.com/" target="_blank">Cataas</a></li>
+            <li>Built by Luccman</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Luccman</p>
+    </footer>

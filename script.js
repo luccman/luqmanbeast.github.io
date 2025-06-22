@@ -6,60 +6,32 @@ let pdfDoc = null,
     pageNumIsPending = null;
 
 const scale = 1.5,
-      canvas = document.querySelector('#pdf-render'),
-      ctx = canvas.getContext('2d');
+    canvas = document.querySelector('#pdf-render'),
+    ctx = canvas.getContext('2d');
 
 const images = [
-  "Pictures/FoodDisplay1.png",
-  "Pictures/FoodDisplay3.png",
-  "Pictures/FoodDisplay4.png",
+    "Pictures/FoodDisplay1.png",
+    "Pictures/FoodDisplay3.png",
+    "Pictures/FoodDisplay4.png",
 ];
 
 let currentIndex = 0;
 const imgElement = document.getElementById("gallery-image");
 
 document.getElementById("next").addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % images.length;
-  imgElement.src = images[currentIndex];
+    currentIndex = (currentIndex + 1) % images.length;
+    imgElement.src = images[currentIndex];
 });
 
 document.getElementById("prev").addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  imgElement.src = images[currentIndex];
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    imgElement.src = images[currentIndex];
 });
+
 function toggleProjects(categoryId) {
     const category = document.getElementById(categoryId);
-
-    if (category.classList.contains('hidden')) {
-        // Remove the hidden class and set the height to auto
-        category.style.height = category.scrollHeight + 'px';
-        category.classList.remove('hidden');
-
-        // Trigger reflow to ensure the transition works
-        category.offsetHeight;
-
-        // Set the height to auto after the transition
-        setTimeout(() => {
-            category.style.height = 'auto';
-        }, 300); // Match the transition duration
-    } else {
-        // Set the height to the current height, then to 0
-        category.style.height = category.scrollHeight + 'px';
-
-        // Trigger reflow to ensure the transition works
-        category.offsetHeight;
-
-        setTimeout(() => {
-            category.style.height = '0';
-        }, 0);
-
-        category.classList.add('hidden');
-    }
-
-    // Add a transition effect
-    category.style.transition = 'height 0.3s ease-in-out';
+    category.classList.toggle('hidden');
 }
-
 // Render the page
 const renderPage = num => {
     pageIsRendering = true;

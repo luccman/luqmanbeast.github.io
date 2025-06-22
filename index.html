@@ -69,6 +69,7 @@
         <h2>Projects</h2>
 
         <div class="project-category" onclick="toggleProjects('game-projects')">
+            <div class="game-bg-svg"></div>
             <h3>🎮 Game Projects 🕹️</h3>
             <div id="game-projects" class="project-list hidden">
                 <div class="project">
@@ -110,6 +111,7 @@
         </div>
 
         <div class="project-category" onclick="toggleProjects('software-projects')">
+            <div class="coding-bg-svg"></div>
             <h3>🖥️ Software Projects 💻</h3>
             <div id="software-projects" class="project-list hidden">
                 <div class="project">
@@ -139,15 +141,30 @@
                             <span class="label">[React Native, Expo, TypeScript]</span>
                         </h4>
                         <p>
-                            <strong>IN PROGRESS</strong> - A modern, cross-platform mobile app for AEON Fantasy arcade users. Features user profiles,
+                            <strong>IN PROGRESS</strong> - A modern, cross-platform mobile app for AEON Fantasy arcade
+                            users. Features user profiles,
                             arcade discovery, activity tracking, and more.
                         </p>
+                    </a>
+                </div>
+                <!-- Add this to your index.html under the appropriate project category (e.g., Software Projects) -->
+                <div class="project">
+                    <a href="PawsAndPreferences.html" class="project-link">
+                        <h4>
+                            Paws & Preferences
+                            <span class="label">[React, TypeScript, Vite, Framer, MUI]</span>
+                        </h4>
+                        <p>
+                            A playful, swipe-based React app for rating Swipe through adorable cats, like/dislike/super
+                            like, and see a summary of your choices.
+
                     </a>
                 </div>
             </div>
         </div>
 
         <div class="project-category" onclick="toggleProjects('design-projects')">
+            <div class="design-bg-svg"></div>
             <h3>🎨 Design Projects 🖼️</h3>
             <div id="design-projects" class="project-list hidden">
                 <div class="project">
@@ -175,6 +192,7 @@
         </div>
 
         <div class="project-category" onclick="toggleProjects('music-projects')">
+            <div class="music-bg-svg"></div>
             <h3>🎙️ Music Projects 🎧</h3>
             <div id="music-projects" class="project-list hidden">
                 <p>Coming soon...</p>
@@ -201,10 +219,7 @@
 
     <script src="script.js"></script>
     <script>
-        function toggleProjects(categoryId) {
-            const category = document.getElementById(categoryId);
-            category.classList.toggle('hidden');
-        }
+
     </script>
 </body>
 
