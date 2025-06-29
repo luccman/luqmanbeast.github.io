@@ -772,15 +772,18 @@ form button:focus {
     opacity: 1; /* Make it more visible when not hidden */
 }
 
-.project-list:hover .project {
-    filter: blur(3px);
+.project {
     transition: filter 0.3s;
 }
 
-.project-list .project:hover {
+/* Only blur non-hovered .project if any .project is hovered */
+.project-list:has(.project:hover) .project:not(:hover) {
+    filter: blur(3px);
+}
+
+.project:hover {
     filter: none;
     z-index: 2;
-    transition: filter 0.3s;
 }
 
 .project-category {
